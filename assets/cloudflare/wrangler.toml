@@ -1,0 +1,4 @@
+name = "cv-proxy"
+main = "cv-proxy.js"
+compatibility_date = "2026-09-02"
+workers_dev = true
