@@ -1,1 +1,76 @@
+.game-window {
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  background: var(--panel-alt);
+  box-shadow:
+    inset 3px 3px 0 var(--bevel-light),
+    inset -3px -3px 0 var(--bevel-dark);
+  overflow: hidden;
+}
+
+.main-row {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  min-width: var(--sidebar-min-width);
+  background:
+    repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.12) 0 1px, transparent 1px 18px),
+    var(--panel);
+  border-right: 2px solid var(--outline);
+  padding: var(--sidebar-pad-block) var(--sidebar-pad-inline);
+  padding-left: max(var(--sidebar-pad-inline), env(safe-area-inset-left));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--sidebar-gap);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.content {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.content-scroll {
+  height: 100%;
+  padding: var(--content-pad-block) var(--content-pad-inline);
+  padding-right: max(var(--content-pad-inline), env(safe-area-inset-right));
+  padding-bottom: max(var(--content-pad-block), env(safe-area-inset-bottom));
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+
+.sidebar,
+.content-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--panel-light) var(--groove);
+}
+
+.sidebar::-webkit-scrollbar,
+.content-scroll::-webkit-scrollbar {
+  width: 11px;
+}
+
+.sidebar::-webkit-scrollbar-track,
+.content-scroll::-webkit-scrollbar-track {
+  background: var(--groove);
+}
+
+.sidebar::-webkit-scrollbar-thumb,
+.content-scroll::-webkit-scrollbar-thumb {
+  background: var(--panel-light);
+  box-shadow:
+    inset 1px 1px 0 var(--bevel-light),
+    inset -1px -1px 0 var(--bevel-dark);
+}
 
