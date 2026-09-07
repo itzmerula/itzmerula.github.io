@@ -1,1 +1,92 @@
 
+@media (max-width: 1200px) {
+  :root {
+    --content-pad-block: 28px;
+    --content-pad-inline: 34px;
+  }
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --sidebar-width: 32%;
+    --sidebar-min-width: 220px;
+    --sidebar-pad-block: 20px;
+    --sidebar-pad-inline: 14px;
+    --content-pad-inline: 26px;
+    --avatar-size: 110px;
+  }
+}
+
+@media (max-width: 700px) {
+  :root {
+    --sidebar-gap: 10px;
+    --sidebar-pad-block: 14px;
+    --content-pad-block: 20px;
+    --content-pad-inline: 20px;
+    --avatar-size: 96px;
+    --heading-size: 15px;
+    --nav-columns: 2;
+  }
+
+  .main-row {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-width: 0;
+    max-height: 45vh;
+    max-height: 45dvh;
+    border-right: none;
+    border-bottom: 2px solid var(--outline);
+  }
+
+  .content {
+    width: 100%;
+    flex: 1;
+    min-height: 0;
+  }
+
+  .nav {
+    margin-top: 6px;
+  }
+
+  .nav-item {
+    font-size: 13px;
+    padding: 10px 12px;
+  }
+
+  .nav-item.active {
+    padding-left: 7px;
+  }
+
+  .tab-panel h2 {
+    margin-bottom: 18px;
+  }
+
+  .advancement {
+    padding: 14px;
+  }
+}
+
+@media (max-width: 430px) {
+  :root {
+    --content-pad-inline: 16px;
+    --avatar-size: 88px;
+    --heading-size: 13px;
+  }
+
+  .nav-item {
+    font-size: 12px;
+    padding: 9px 10px;
+  }
+
+  .nav-item.active {
+    padding-left: 5px;
+  }
+
+  .tab-panel p,
+  .about-list li span:last-child {
+    font-size: 15px;
+  }
+}
