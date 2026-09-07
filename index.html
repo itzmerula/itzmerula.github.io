@@ -3,49 +3,160 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#121110">
-<meta name="description" content="merula's CV - Minecraft Developer, Systems Administrator, and Server Architect.">
+<meta name="theme-color" content="#0d0e12">
+<meta name="description" content="merula's CV - Minecraft Skript Developer">
 <title>merula's CV</title>
-
-<!-- Canonical & Open Graph -->
-<link rel="canonical" href="https://merula.dev/">
 <link rel="icon" href="assets/img/profile.png" type="image/png">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="merula's CV">
-<meta property="og:url" content="https://merula.dev/">
-<meta property="og:title" content="merula's CV">
-<meta property="og:description" content="merula's CV - Minecraft Developer, Systems Administrator, and Server Architect.">
-<meta property="og:image" content="https://merula.dev/assets/img/profile.png?v=2">
-<meta property="og:image:secure_url" content="https://merula.dev/assets/img/profile.png?v=2">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="736">
-<meta property="og:image:height" content="736">
-<meta property="og:image:alt" content="merula profile picture">
-
-<!-- Twitter Cards -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="merula's CV">
-<meta name="twitter:description" content="merula's CV - Minecraft Developer, Systems Administrator, and Server Architect.">
-<meta name="twitter:image" content="https://merula.dev/assets/img/profile.png?v=2">
-<meta name="twitter:image:alt" content="merula profile picture">
-
-<!-- Preconnect Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-
-<!-- Stylesheets -->
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=JetBrains+Mono:wght@400;500;700;800&family=Orbitron:wght@700;900&family=Press+Start+2P&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/base.css">
 <link rel="stylesheet" href="assets/css/layout.css">
 <link rel="stylesheet" href="assets/css/components.css">
 <link rel="stylesheet" href="assets/css/responsive.css">
 <link rel="stylesheet" href="assets/css/intro.css">
-
 <style>
-  html.intro-active .game-window { opacity: 0; pointer-events: none; }
-  #startup { position: fixed; inset: 0; z-index: 999; background-color: #121110; }
-</style>
+:root {
+  --bg-color: #0d0e12;
+  --card-bg: #141720;
+  --accent-color: #7289da;
+  --accent-glow: #00f2fe;
+  --text-main: #e2e8f0;
+  --text-sub: #94a3b8;
+  --border-color: #2a2f45;
+  --font-main: 'JetBrains Mono', monospace;
+  --font-heading: 'Chakra Petch', sans-serif;
+  --font-startup: 'Orbitron', sans-serif;
+}
 
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-main);
+}
+
+html.intro-active .game-window { opacity: 0; pointer-events: none; }
+
+#startup {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background-color: #07080b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-startup);
+}
+
+.startup-word {
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 6px;
+  color: var(--accent-glow);
+  text-shadow: 0 0 20px rgba(0, 242, 254, 0.6);
+  text-transform: uppercase;
+  display: flex;
+  gap: 8px;
+}
+
+.startup-bar {
+  width: 240px;
+  height: 6px;
+  background: var(--border-color);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 25px;
+}
+
+.startup-bar-fill {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-glow));
+  animation: loadFill 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes loadFill {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+.game-window {
+  background: #10121a;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  padding: 24px;
+}
+
+.player-name {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.player-title {
+  color: var(--accent-glow);
+  font-weight: 600;
+}
+
+.nav-item, .contact-btn, .bevel-out {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 8px !important;
+  color: var(--text-main) !important;
+  font-family: var(--font-main) !important;
+  font-weight: 600 !important;
+  transition: all 0.25s ease-in-out !important;
+  box-shadow: none !important;
+}
+
+.nav-item:hover, .contact-btn:hover, .bevel-out:hover {
+  border-color: var(--accent-glow) !important;
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.2) !important;
+  transform: translateY(-2px);
+  color: #fff !important;
+}
+
+.nav-item.active {
+  background: linear-gradient(135deg, rgba(114,137,218,0.2), rgba(0,242,254,0.1)) !important;
+  border-color: var(--accent-glow) !important;
+  color: var(--accent-glow) !important;
+}
+
+.visit-counter {
+  background: rgba(255,255,255,0.03);
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  font-size: 0.85rem;
+  color: var(--text-sub);
+}
+
+.visit-count {
+  color: var(--accent-glow);
+  font-weight: 700;
+}
+
+.about-list li {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.about-num {
+  background: var(--accent-glow);
+  color: #000;
+  font-weight: 800;
+  border-radius: 4px;
+  padding: 2px 8px;
+}
+</style>
 <script>
 (function () {
   var root = document.documentElement;
@@ -59,24 +170,31 @@
 
     root.classList.remove('intro-active');
     root.classList.add('intro-done');
-  }, 8500);
+  }, 2200);
 })();
-</script>
 
+document.addEventListener("DOMContentLoaded", function () {
+  var countEl = document.querySelector('[data-visits]');
+  if (countEl) {
+    var visits = parseInt(localStorage.getItem('merula_cv_visits') || '0', 10);
+    visits += 1;
+    localStorage.setItem('merula_cv_visits', visits.toString());
+    countEl.textContent = visits;
+    countEl.removeAttribute('hidden');
+  }
+});
+</script>
 <script src="assets/js/intro.js" defer></script>
 <script src="assets/js/tabs.js" defer></script>
 <script src="assets/js/skills.js" defer></script>
 <script src="assets/js/media-fallback.js" defer></script>
 <script src="assets/js/clipboard.js" defer></script>
-<script src="assets/js/visits.js" defer></script>
 </head>
 <body>
 
 <div id="startup" role="presentation" aria-hidden="true">
   <div class="startup-stage">
-    <p class="startup-word">
-      <span style="--i:0">m</span><span style="--i:1">e</span><span style="--i:2">r</span><span style="--i:3">u</span><span style="--i:4">l</span><span style="--i:5">a</span>
-    </p>
+    <p class="startup-word"><span style="--i:0">M</span><span style="--i:1">E</span><span style="--i:2">R</span><span style="--i:3">U</span><span style="--i:4">L</span><span style="--i:5">A</span></p>
   </div>
   <div class="startup-bar"><span class="startup-bar-fill"></span></div>
 </div>
@@ -86,94 +204,84 @@
     <aside class="sidebar">
       <div class="avatar-wrap">
         <div class="avatar-slot bevel-out" data-media>
-          <img src="assets/img/profile.png" alt="merula profile picture" width="130" height="130" fetchpriority="high" decoding="async">
+          <img src="assets/img/profile.png" alt="Profile picture" width="130" height="130" fetchpriority="high" decoding="async">
           <span class="avatar-placeholder" aria-hidden="true">✚</span>
         </div>
       </div>
 
       <h1 class="player-name">merula</h1>
       <p class="player-title">Minecraft Developer</p>
-      <span class="server-tag">Minecraft CV</span>
+      <span class="server-tag">Skript Specialist</span>
 
-      <p class="visit-counter">Visits <span class="visit-count" data-visits hidden></span></p>
+      <p class="visit-counter">Visits: <span class="visit-count" data-visits hidden>0</span></p>
 
-      <nav class="nav" role="tablist" aria-label="CV sections" aria-orientation="vertical" data-tablist>
+      <div class="nav" role="tablist" aria-label="CV sections" aria-orientation="vertical" data-tablist>
         <button type="button" class="nav-item active" role="tab" id="tab-about" aria-controls="panel-about" aria-selected="true">About Me</button>
         <button type="button" class="nav-item" role="tab" id="tab-skills" aria-controls="panel-skills" aria-selected="false" tabindex="-1">Skills</button>
-        <button type="button" class="nav-item" role="tab" id="tab-current" aria-controls="panel-current" aria-selected="false" tabindex="-1">Current Positions</button>
         <button type="button" class="nav-item" role="tab" id="tab-past" aria-controls="panel-past" aria-selected="false" tabindex="-1">Past Experience</button>
         <button type="button" class="nav-item" role="tab" id="tab-contact" aria-controls="panel-contact" aria-selected="false" tabindex="-1">Contact Me</button>
-      </nav>
+      </div>
     </aside>
 
     <main class="content">
       <div class="content-scroll">
 
-        <!-- ABOUT PANEL -->
         <section class="tab-panel active" id="panel-about" role="tabpanel" aria-labelledby="tab-about">
           <h2>About Me</h2>
           <ol class="about-list">
-            <li>
-              <span class="about-num" aria-hidden="true">1</span>
-              <span>Hello, I'm <strong>merula</strong>, a 16-year-old Minecraft developer with 5 years of experience in custom server mechanics, plugin configurations, and backend administration. Over the years, I've designed custom game modes, integrated anti-cheat solutions, and built server environments for competitive PvP, generator economies, and custom kit mechanics. This portfolio showcases my experience, skills, and projects.</span>
-            </li>
-            <li>
-              <span class="about-num" aria-hidden="true">2</span>
-              <span>I specialize in high-performance Minecraft server environments, utilizing Java, Skript (alongside modern addons like SkBee and skript-reflect), and administrative tools to build optimized, engaging gameplay experiences.</span>
-            </li>
+            <li><span class="about-num" aria-hidden="true">1</span><span>I'm merula, a 14-year-old Minecraft developer specializing in custom server mechanics and Skript logic.</span></li>
+            <li><span class="about-num" aria-hidden="true">2</span><span>Alongside Skript, I write C++, HTML, and JavaScript, and I am currently expanding my knowledge in Java plugin development.</span></li>
           </ol>
         </section>
 
-        <!-- SKILLS PANEL -->
         <section class="tab-panel" id="panel-skills" role="tabpanel" aria-labelledby="tab-skills">
-          <h2>Skills &amp; Expertise</h2>
+          <h2>Skills</h2>
 
           <div data-skills>
-            <div class="skill-row skill-diamond" data-pct="100">
+            <div class="skill-row skill-emerald" data-pct="100">
               <div class="skill-head">
-                <span class="skill-left"><span class="skill-swatch" aria-hidden="true"></span><span class="skill-name" id="skill-admin">Server Administration &amp; Optimization</span></span>
-                <span class="skill-pct"></span>
-              </div>
-              <div class="skill-track bevel-in" role="progressbar" aria-labelledby="skill-admin" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill"></div></div>
-            </div>
-
-            <div class="skill-row skill-emerald" data-pct="95">
-              <div class="skill-head">
-                <span class="skill-left"><span class="skill-logo"><img src="assets/img/logos/skript.png" alt="Skript logo" width="18" height="18" decoding="async"></span><span class="skill-name" id="skill-skript">Skript &amp; Addons (SkBee, skript-reflect)</span></span>
-                <span class="skill-pct"></span>
+                <span class="skill-left"><span class="skill-swatch" aria-hidden="true"></span><span class="skill-name" id="skill-skript">Skript Development</span></span>
+                <span class="skill-pct">100%</span>
               </div>
               <div class="skill-track bevel-in" role="progressbar" aria-labelledby="skill-skript" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill"></div></div>
             </div>
 
-            <div class="skill-row skill-gold" data-pct="90">
+            <div class="skill-row skill-diamond" data-pct="70">
               <div class="skill-head">
-                <span class="skill-left"><span class="skill-swatch" aria-hidden="true"></span><span class="skill-name" id="skill-plugins-config">Plugin Configuration &amp; Systems Integration</span></span>
-                <span class="skill-pct"></span>
+                <span class="skill-left"><span class="skill-swatch" aria-hidden="true"></span><span class="skill-name" id="skill-cpp">C++</span></span>
+                <span class="skill-pct">70%</span>
               </div>
-              <div class="skill-track bevel-in" role="progressbar" aria-labelledby="skill-plugins-config" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill"></div></div>
+              <div class="skill-track bevel-in" role="progressbar" aria-labelledby="skill-cpp" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill"></div></div>
             </div>
 
-            <div class="skill-row skill-ender" data-pct="80">
+            <div class="skill-row skill-redstone" data-pct="75">
               <div class="skill-head">
-                <span class="skill-left"><span class="skill-logo"><img src="assets/img/logos/java.svg" alt="Java logo" width="18" height="18" decoding="async"></span><span class="skill-name" id="skill-java">Java (Paper/Purpur APIs, LuckPerms)</span></span>
-                <span class="skill-pct"></span>
+                <span class="skill-left"><span class="skill-swatch" aria-hidden="true"></span><span class="skill-name" id="skill-html">HTML &amp; CSS</span></span>
+                <span class="skill-pct">75%</span>
+              </div>
+              <div class="skill-track bevel-in" role="progressbar" aria-labelledby="skill-html" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill"></div></div>
+            </div>
+
+            <div class="skill-row skill-gold" data-pct="60">
+              <div class="skill-head">
+                <span class="skill-left"><span class="skill-swatch" aria-hidden="true"></span><span class="skill-name" id="skill-js">JavaScript</span></span>
+                <span class="skill-pct">60%</span>
+              </div>
+              <div class="skill-track bevel-in" role="progressbar" aria-labelledby="skill-js" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill"></div></div>
+            </div>
+
+            <div class="skill-row skill-ender" data-pct="35">
+              <div class="skill-head">
+                <span class="skill-left"><span class="skill-swatch" aria-hidden="true"></span><span class="skill-name" id="skill-java">Java (Learning)</span></span>
+                <span class="skill-pct">35%</span>
               </div>
               <div class="skill-track bevel-in" role="progressbar" aria-labelledby="skill-java" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill"></div></div>
-            </div>
-
-            <div class="skill-row skill-redstone" data-pct="80">
-              <div class="skill-head">
-                <span class="skill-left"><span class="skill-swatch" aria-hidden="true"></span><span class="skill-name" id="skill-anticheat">Anti-Cheat Management (GrimAC, Vulcan)</span></span>
-                <span class="skill-pct"></span>
-              </div>
-              <div class="skill-track bevel-in" role="progressbar" aria-labelledby="skill-anticheat" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill"></div></div>
             </div>
           </div>
         </section>
 
-        <!-- CURRENT POSITIONS PANEL -->
-        <section class="tab-panel" id="panel-current" role="tabpanel" aria-labelledby="tab-current">
-          <h2>Current Positions &amp; Active Projects</h2>
+        <section class="tab-panel" id="panel-past" role="tabpanel" aria-labelledby="tab-past">
+          <h2>Past Experience</h2>
 
           <div class="advancement bevel-out">
             <div class="adv-icon" data-media>
@@ -181,60 +289,31 @@
               <span class="adv-icon-fallback" aria-hidden="true">PF</span>
             </div>
             <div class="adv-body">
-              <h3>PigFFA — Lead Developer</h3>
-              <p class="adv-date">Active</p>
-              <p>Lead server developer and system architect. Authored custom plugins, moderation tools, and performance optimizations.</p>
+              <h3><a href="https://discord.gg/pigffa" target="_blank" rel="noopener noreferrer" class="adv-title-link">PigFFA — Developer</a></h3>
+              <p class="adv-date">Former (Resigned)</p>
+              <p>Handled server mechanics, custom Skript configurations, and developer solutions.</p>
             </div>
           </div>
-
-          <div class="advancement bevel-out">
-            <div class="adv-icon" data-media>
-              <img src="assets/img/current-spearmaceffa.png" alt="" width="42" height="42" decoding="async">
-              <span class="adv-icon-fallback" aria-hidden="true">SM</span>
-            </div>
-            <div class="adv-body">
-              <h3>SpearMaceFFA — Head Developer</h3>
-              <p class="adv-date">Active</p>
-              <p>Responsible for server configuration, network debugging, custom mechanics, and performance tuning.</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- PAST EXPERIENCE PANEL -->
-        <section class="tab-panel" id="panel-past" role="tabpanel" aria-labelledby="tab-past">
-          <h2>Past Experience</h2>
 
           <div class="advancement bevel-out">
             <div class="adv-icon" data-media>
               <img src="assets/img/past-gekkesmp.png" alt="" width="42" height="42" decoding="async">
-              <span class="adv-icon-fallback" aria-hidden="true">SP</span>
+              <span class="adv-icon-fallback" aria-hidden="true">UF</span>
             </div>
             <div class="adv-body">
-              <h3>Sphere | Rework</h3>
-              <p class="adv-date">Developer &amp; Manager</p>
-              <p>Designed and managed custom game modes, staff monitoring suites, and server configurations on Minefort.</p>
-            </div>
-          </div>
-
-          <div class="advancement bevel-out">
-            <div class="adv-icon" data-media>
-              <img src="assets/img/past-hydrodupe.png" alt="" width="42" height="42" decoding="async">
-              <span class="adv-icon-fallback" aria-hidden="true">HD</span>
-            </div>
-            <div class="adv-body">
-              <h3>HydroDupe</h3>
-              <p class="adv-date">Main Developer &amp; Systems Admin</p>
-              <p>Handled plugin management, bug fixing, custom administrative scripting, and overall network health.</p>
+              <h3><a href="https://discord.gg/unstableffas" target="_blank" rel="noopener noreferrer" class="adv-title-link">UnstableFFAKit — Helper</a></h3>
+              <p class="adv-date">Former (Resigned)</p>
+              <p>Assisted server setup, player support, and configuration tasks.</p>
             </div>
           </div>
         </section>
 
-        <!-- CONTACT PANEL -->
         <section class="tab-panel" id="panel-contact" role="tabpanel" aria-labelledby="tab-contact">
           <h2>Contact</h2>
           <div class="contact-grid">
             <button type="button" class="contact-btn bevel-out" data-copy="merula"><span class="contact-label">Discord — merula</span></button>
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="contact-btn bevel-out"><span>GitHub — Profile</span></a>
+            <a href="https://discord.gg/pigffa" target="_blank" rel="noopener noreferrer" class="contact-btn bevel-out"><span>PigFFA Discord — discord.gg/pigffa</span></a>
+            <a href="https://discord.gg/unstableffas" target="_blank" rel="noopener noreferrer" class="contact-btn bevel-out"><span>UnstableFFAKit Discord — discord.gg/unstableffas</span></a>
           </div>
           <p id="copyStatus" class="visually-hidden" role="status"></p>
         </section>
