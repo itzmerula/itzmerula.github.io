@@ -1,1 +1,193 @@
 
+#startup {
+  --step: 82ms;
+  --tick: 300ms;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background-color: #ef323d;
+  overflow: hidden;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.startup-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16vh;
+  max-width: 100%;
+}
+
+.startup-word {
+  display: flex;
+  justify-content: center;
+  gap: 0.06em;
+  margin: 0;
+  font-family: var(--font-pixel);
+  font-size: clamp(14px, 4.6vw, 54px);
+  line-height: 1;
+  letter-spacing: 0;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.startup-word span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(6px) scale(0.94);
+}
+
+#startup.is-lit .startup-word span {
+  animation: startup-letter 200ms steps(4, end) calc(var(--i) * var(--step)) both;
+}
+
+.startup-bar {
+  position: absolute;
+  left: 50%;
+  bottom: 22%;
+  transform: translateX(-50%);
+  width: min(60vw, 706px);
+  height: 20px;
+  padding: 3px;
+  border: 2px solid #fff;
+  background: transparent;
+  opacity: 0;
+}
+
+.startup-bar-fill {
+  display: block;
+  width: 0;
+  height: 100%;
+  background: #fff;
+  transition: width var(--tick) steps(4, end);
+}
+
+#startup.is-loading .startup-bar {
+  animation: startup-fade 260ms linear both;
+}
+
+#startup.is-out {
+  animation: startup-out 440ms ease both;
+}
+
+@keyframes startup-letter {
+  from { opacity: 0; transform: translateY(6px) scale(0.94); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes startup-fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes startup-out {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+html.intro-active .game-window {
+  opacity: 0;
+  pointer-events: none;
+}
+
+html.intro-active .sidebar,
+html.intro-active .content-scroll {
+  overflow: hidden;
+}
+
+html.intro-done .game-window {
+  animation: cv-window-in 0.45s ease both;
+}
+
+html.intro-done .avatar-wrap { animation: cv-part-in 0.5s cubic-bezier(0.2, 0.7, 0.3, 1) 0.04s both; }
+html.intro-done .player-name { animation: cv-part-in 0.5s cubic-bezier(0.2, 0.7, 0.3, 1) 0.12s both; }
+html.intro-done .player-title { animation: cv-part-in 0.5s cubic-bezier(0.2, 0.7, 0.3, 1) 0.18s both; }
+html.intro-done .server-tag { animation: cv-part-in 0.5s cubic-bezier(0.2, 0.7, 0.3, 1) 0.23s both; }
+html.intro-done .visit-counter { animation: cv-part-in 0.5s cubic-bezier(0.2, 0.7, 0.3, 1) 0.27s both; }
+html.intro-done .content-scroll { animation: cv-part-in 0.55s cubic-bezier(0.2, 0.7, 0.3, 1) 0.22s both; }
+
+html.intro-done .nav-item {
+  animation: cv-part-in 0.42s cubic-bezier(0.2, 0.7, 0.3, 1) both;
+}
+
+html.intro-done .nav-item:nth-child(1) { animation-delay: 0.3s; }
+html.intro-done .nav-item:nth-child(2) { animation-delay: 0.35s; }
+html.intro-done .nav-item:nth-child(3) { animation-delay: 0.4s; }
+html.intro-done .nav-item:nth-child(4) { animation-delay: 0.45s; }
+html.intro-done .nav-item:nth-child(5) { animation-delay: 0.5s; }
+html.intro-done .nav-item:nth-child(6) { animation-delay: 0.55s; }
+html.intro-done .nav-item:nth-child(7) { animation-delay: 0.6s; }
+
+@keyframes cv-window-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes cv-part-in {
+  from { opacity: 0; transform: translateY(9px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 700px) {
+  .startup-bar {
+    height: 18px;
+  }
+}
+
+@media (max-height: 420px) {
+  .startup-stage {
+    margin-bottom: 10vh;
+  }
+
+  .startup-bar {
+    bottom: 15%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #startup {
+    transition: opacity 0.28s linear !important;
+  }
+
+  .startup-word span {
+    opacity: 1;
+    transform: none;
+  }
+
+  #startup.is-lit .startup-word span,
+  #startup.is-loading .startup-bar {
+    animation: none !important;
+  }
+
+  .startup-bar {
+    opacity: 1;
+  }
+
+  #startup.is-out {
+    opacity: 0;
+    animation: none !important;
+  }
+
+  .game-window {
+    transition: opacity 0.3s linear !important;
+  }
+
+  html.intro-done .game-window,
+  html.intro-done .avatar-wrap,
+  html.intro-done .player-name,
+  html.intro-done .player-title,
+  html.intro-done .server-tag,
+  html.intro-done .visit-counter,
+  html.intro-done .content-scroll,
+  html.intro-done .nav-item {
+    animation: none !important;
+    opacity: 1;
+    transform: none;
+  }
+}
