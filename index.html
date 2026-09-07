@@ -1,0 +1,299 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#121110">
+<meta name="description" content="My Minecraft CV - Minecraft developer, server administrator and founder of CloneDupe.">
+<title>Infectedware's CV</title>
+<link rel="canonical" href="https://infectedware.dev/">
+<link rel="icon" href="assets/img/profile.png" type="image/png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Infectedware's CV">
+<meta property="og:url" content="https://infectedware.dev/">
+<meta property="og:title" content="Infectedware's CV">
+<meta property="og:description" content="My Minecraft CV - Minecraft developer, server administrator and founder of CloneDupe.">
+<meta property="og:image" content="https://infectedware.dev/assets/img/profile.png?v=2">
+<meta property="og:image:secure_url" content="https://infectedware.dev/assets/img/profile.png?v=2">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="736">
+<meta property="og:image:height" content="736">
+<meta property="og:image:alt" content="Jules (infectedware) profile picture">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Infectedware's CV">
+<meta name="twitter:description" content="My Minecraft CV - Minecraft developer, server administrator and founder of CloneDupe.">
+<meta name="twitter:image" content="https://infectedware.dev/assets/img/profile.png?v=2">
+<meta name="twitter:image:alt" content="Jules (infectedware) profile picture">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+<link rel="stylesheet" href="assets/css/intro.css">
+<style>html.intro-active .game-window{opacity:0;pointer-events:none}#startup{position:fixed;inset:0;z-index:999;background-color:#ef323d}</style>
+<script>
+(function () {
+  var root = document.documentElement;
+  root.classList.add('intro-active');
+
+  window.setTimeout(function () {
+    if (root.classList.contains('intro-done')) return;
+
+    var overlay = document.getElementById('startup');
+    if (overlay && overlay.parentNode) overlay.parentNode.removeChild(overlay);
+
+    root.classList.remove('intro-active');
+    root.classList.add('intro-done');
+  }, 8500);
+})();
+</script>
+<script src="assets/js/intro.js" defer></script>
+<script src="assets/js/tabs.js" defer></script>
+<script src="assets/js/skills.js" defer></script>
+<script src="assets/js/media-fallback.js" defer></script>
+<script src="assets/js/clipboard.js" defer></script>
+<script src="assets/js/visits.js" defer></script>
+</head>
+<body>
+
+<div id="startup" role="presentation" aria-hidden="true">
+  <div class="startup-stage">
+    <p class="startup-word"><span style="--i:0">i</span><span style="--i:1">n</span><span style="--i:2">f</span><span style="--i:3">e</span><span style="--i:4">c</span><span style="--i:5">t</span><span style="--i:6">e</span><span style="--i:7">d</span><span style="--i:8">w</span><span style="--i:9">a</span><span style="--i:10">r</span><span style="--i:11">e</span></p>
+  </div>
+  <div class="startup-bar"><span class="startup-bar-fill"></span></div>
+</div>
+
+<div class="game-window">
+  <div class="main-row">
+    <aside class="sidebar">
+      <div class="avatar-wrap">
+        <div class="avatar-slot bevel-out" data-media>
+          <img src="assets/img/profile.png" alt="Profile picture" width="130" height="130" fetchpriority="high" decoding="async">
+          <span class="avatar-placeholder" aria-hidden="true">✚</span>
+        </div>
+      </div>
+
+      <h1 class="player-name">Jules</h1>
+      <p class="player-title">Minecraft Developer</p>
+      <span class="server-tag">Minecraft CV</span>
+
+      <p class="visit-counter">Visits <span class="visit-count" data-visits hidden></span></p>
+
+      <div class="nav" role="tablist" aria-label="CV sections" aria-orientation="vertical" data-tablist>
+        <button type="button" class="nav-item active" role="tab" id="tab-about" aria-controls="panel-about" aria-selected="true">About Me</button>
+        <button type="button" class="nav-item" role="tab" id="tab-skills" aria-controls="panel-skills" aria-selected="false" tabindex="-1">Skills</button>
+        <button type="button" class="nav-item" role="tab" id="tab-current" aria-controls="panel-current" aria-selected="false" tabindex="-1">Current Positions</button>
+        <button type="button" class="nav-item" role="tab" id="tab-past" aria-controls="panel-past" aria-selected="false" tabindex="-1">Past Experience</button>
+        <button type="button" class="nav-item" role="tab" id="tab-contact" aria-controls="panel-contact" aria-selected="false" tabindex="-1">Contact Me</button>
+      </div>
+    </aside>
+
+    <main class="content">
+      <div class="content-scroll">
+
+        <section class="tab-panel active" id="panel-about" role="tabpanel" aria-labelledby="tab-about">
+          <h2>About Me</h2>
+          <ol class="about-list">
+            <li><span class="about-num" aria-hidden="true">1</span><span>Hey, i'm infectedware, also known as Jules, a 15-year old Minecraft developer. I've been developing on Minecraft since i was 11 years old, and it's something i've genuinely enjoyed ever since. Over the years, i've worked on a on a lot of plugins, custom systems, server configurations, and other Minecraft-related projects, allowing me to gain a lot of experience and improve my skills. This website is my CV, where you can learn more about me, see the projects i've worked on, and get an overview of my experience and knowledge in Minecraft development.</span></li>
+            <li><span class="about-num" aria-hidden="true">2</span><span>I currently live in Romania, but i'm originally from France and moved here in 2021. I've really enjoyed living here, and i think Romania is a beautiful country with amazing traditions and culture. Although i sometimes miss my family since i only get to see them once or twice a year, i'm happy with my life here and have grown to love the country.</span></li>
+          </ol>
+        </section>
+
+        <section class="tab-panel" id="panel-skills" role="tabpanel" aria-labelledby="tab-skills">
+          <h2>Skills</h2>
+
+          <div data-skills>
+            <div class="skill-row skill-diamond" data-pct="100">
+              <div class="skill-head">
+                <span class="skill-left"><span class="skill-swatch" aria-hidden="true"></span><span class="skill-name" id="skill-admin">Server Administration</span></span>
+                <span class="skill-pct"></span>
+              </div>
+              <div class="skill-track bevel-in" role="progressbar" aria-labelledby="skill-admin" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill"></div></div>
+            </div>
+
+            <div class="skill-row skill-gold" data-pct="95">
+              <div class="skill-head">
+                <span class="skill-left"><span class="skill-swatch" aria-hidden="true"></span><span class="skill-name" id="skill-plugins-config">Plugins configuration</span></span>
+                <span class="skill-pct"></span>
+              </div>
+              <div class="skill-track bevel-in" role="progressbar" aria-labelledby="skill-plugins-config" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill"></div></div>
+            </div>
+
+            <div class="skill-row skill-redstone" data-pct="75">
+              <div class="skill-head">
+                <span class="skill-left"><span class="skill-swatch" aria-hidden="true"></span><span class="skill-name" id="skill-optimization">Server Optimization</span></span>
+                <span class="skill-pct"></span>
+              </div>
+              <div class="skill-track bevel-in" role="progressbar" aria-labelledby="skill-optimization" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill"></div></div>
+            </div>
+
+            <div class="skill-row skill-netherite" data-pct="75">
+              <div class="skill-head">
+                <span class="skill-left"><span class="skill-swatch" aria-hidden="true"></span><span class="skill-name" id="skill-plugin-knowledge">Plugin Knowledge</span></span>
+                <span class="skill-pct"></span>
+              </div>
+              <div class="skill-track bevel-in" role="progressbar" aria-labelledby="skill-plugin-knowledge" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill"></div></div>
+            </div>
+
+            <div class="skill-row skill-emerald" data-pct="50">
+              <div class="skill-head">
+                <span class="skill-left"><span class="skill-logo"><img src="assets/img/logos/skript.png" alt="Skript logo" width="18" height="18" decoding="async"></span><span class="skill-name" id="skill-skript">Skript</span></span>
+                <span class="skill-pct"></span>
+              </div>
+              <div class="skill-track bevel-in" role="progressbar" aria-labelledby="skill-skript" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill"></div></div>
+            </div>
+
+            <div class="skill-row skill-ender" data-pct="65">
+              <div class="skill-head">
+                <span class="skill-left"><span class="skill-logo"><img src="assets/img/logos/java.svg" alt="Java logo" width="18" height="18" decoding="async"></span><span class="skill-name" id="skill-java">Java</span></span>
+                <span class="skill-pct"></span>
+              </div>
+              <div class="skill-track bevel-in" role="progressbar" aria-labelledby="skill-java" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill"></div></div>
+            </div>
+
+            <div class="skill-row skill-gold" data-pct="30">
+              <div class="skill-head">
+                <span class="skill-left"><span class="skill-logo"><img src="assets/img/logos/javascript.png" alt="JavaScript logo" width="18" height="18" decoding="async"></span><span class="skill-name" id="skill-javascript">JavaScript</span></span>
+                <span class="skill-pct"></span>
+              </div>
+              <div class="skill-track bevel-in" role="progressbar" aria-labelledby="skill-javascript" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill"></div></div>
+            </div>
+
+            <div class="skill-row skill-redstone" data-pct="30">
+              <div class="skill-head">
+                <span class="skill-left"><span class="skill-logo"><img src="assets/img/logos/html5.svg" alt="HTML5 logo" width="18" height="18" decoding="async"></span><span class="skill-name" id="skill-html">HTML</span></span>
+                <span class="skill-pct"></span>
+              </div>
+              <div class="skill-track bevel-in" role="progressbar" aria-labelledby="skill-html" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill"></div></div>
+            </div>
+
+            <div class="skill-row skill-diamond" data-pct="25">
+              <div class="skill-head">
+                <span class="skill-left"><span class="skill-logo"><img src="assets/img/logos/css.svg" alt="CSS3 logo" width="18" height="18" decoding="async"></span><span class="skill-name" id="skill-css">CSS</span></span>
+                <span class="skill-pct"></span>
+              </div>
+              <div class="skill-track bevel-in" role="progressbar" aria-labelledby="skill-css" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill"></div></div>
+            </div>
+
+            <div class="skill-row skill-lapis" data-pct="15">
+              <div class="skill-head">
+                <span class="skill-left"><span class="skill-logo"><img src="assets/img/logos/python.svg" alt="Python logo" width="18" height="18" decoding="async"></span><span class="skill-name" id="skill-python">Python</span></span>
+                <span class="skill-pct"></span>
+              </div>
+              <div class="skill-track bevel-in" role="progressbar" aria-labelledby="skill-python" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill"></div></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="tab-panel" id="panel-current" role="tabpanel" aria-labelledby="tab-current">
+          <h2>Current Positions</h2>
+
+          <div class="advancement bevel-out">
+            <div class="adv-icon" data-media>
+              <img src="assets/img/current-clonedupe.png" alt="" width="42" height="42" decoding="async">
+              <span class="adv-icon-fallback" aria-hidden="true">CD</span>
+            </div>
+            <div class="adv-body">
+              <h3><a href="https://discord.gg/clonedupe" target="_blank" rel="noopener noreferrer" class="adv-title-link">CloneDupe.net - Founder.</a></h3>
+              <p class="adv-date">Since 2023-2026</p>
+              <p>Owner &amp; full time developer &amp; System Administrator.</p>
+            </div>
+          </div>
+
+          <div class="advancement bevel-out">
+            <div class="adv-icon" data-media>
+              <img src="assets/img/current-spearmaceffa.png" alt="" width="42" height="42" decoding="async">
+              <span class="adv-icon-fallback" aria-hidden="true">SM</span>
+            </div>
+            <div class="adv-body">
+              <h3><a href="https://discord.gg/spearmaceffa" target="_blank" rel="noopener noreferrer" class="adv-title-link">SpearMaceFFA.xyz - Head Developer.</a></h3>
+              <p class="adv-date">Since 5+ months</p>
+              <p>Server configuration + optimization, network developer &amp; bug fixer.</p>
+            </div>
+          </div>
+
+          <div class="advancement bevel-out">
+            <div class="adv-icon" data-media>
+              <img src="assets/img/current-netheritemaceffa.png" alt="" width="42" height="42" decoding="async">
+              <span class="adv-icon-fallback" aria-hidden="true">NM</span>
+            </div>
+            <div class="adv-body">
+              <h3><a href="https://discord.gg/netheritemaceffa" target="_blank" rel="noopener noreferrer" class="adv-title-link">NetheriteMaceFFA.net - Co Owner.</a></h3>
+              <p class="adv-date">Since 4+ months</p>
+              <p>Whole server developer &amp; System Administrator.</p>
+            </div>
+          </div>
+
+          <div class="advancement bevel-out">
+            <div class="adv-icon" data-media>
+              <img src="assets/img/current-pigffa.png" alt="" width="42" height="42" decoding="async">
+              <span class="adv-icon-fallback" aria-hidden="true">PF</span>
+            </div>
+            <div class="adv-body">
+              <h3><a href="https://discord.gg/pigffa" target="_blank" rel="noopener noreferrer" class="adv-title-link">PigFFA - Developer.</a></h3>
+              <p class="adv-date">Since 2+ month</p>
+              <p>All time developer &amp; Server configuration + optimization, made most of the plugins.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="tab-panel" id="panel-past" role="tabpanel" aria-labelledby="tab-past">
+          <h2>Past Experience</h2>
+
+          <div class="advancement bevel-out">
+            <div class="adv-icon" data-media>
+              <img src="assets/img/past-gekkesmp.png" alt="" width="42" height="42" decoding="async">
+              <span class="adv-icon-fallback" aria-hidden="true">GS</span>
+            </div>
+            <div class="adv-body">
+              <h3><a href="https://discord.gg/purgesmp" target="_blank" rel="noopener noreferrer" class="adv-title-link">GekkeSMP.net - Developer</a></h3>
+              <p class="adv-date">2025 - 2025</p>
+              <p>Whole server developer + System Administrator.</p>
+            </div>
+          </div>
+
+          <div class="advancement bevel-out">
+            <div class="adv-icon" data-media>
+              <img src="assets/img/past-hydrodupe.png" alt="" width="42" height="42" decoding="async">
+              <span class="adv-icon-fallback" aria-hidden="true">HD</span>
+            </div>
+            <div class="adv-body">
+              <h3><a href="https://discord.gg/4nNTxramXj" target="_blank" rel="noopener noreferrer" class="adv-title-link">Play.HydroDupe.org - Developer</a></h3>
+              <p class="adv-date">2024 - 2026</p>
+              <p>Main developer, bug fixer, plugin management + System Administrator.</p>
+            </div>
+          </div>
+
+          <div class="advancement bevel-out">
+            <div class="adv-icon" data-media>
+              <img src="assets/img/Past-KumFFA.png" alt="" width="42" height="42" decoding="async">
+              <span class="adv-icon-fallback" aria-hidden="true">KF</span>
+            </div>
+            <div class="adv-body">
+              <h3>KumFFA</h3>
+              <p class="adv-date">1 week</p>
+              <p>Resigned with reason: unprofessional + racist staff team.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="tab-panel" id="panel-contact" role="tabpanel" aria-labelledby="tab-contact">
+          <h2>Contact</h2>
+          <div class="contact-grid">
+            <button type="button" class="contact-btn bevel-out" data-copy="infectedware"><span class="contact-label">Discord — infectedware</span></button>
+            <button type="button" class="contact-btn bevel-out" data-copy="developingjules@gmail.com"><span class="contact-label">Email — developingjules@gmail.com</span></button>
+            <a href="https://github.com/Jules0061" target="_blank" rel="noopener noreferrer" class="contact-btn bevel-out"><span>GitHub — Jules0061</span></a>
+            <a href="https://discord.gg/clonedupe" target="_blank" rel="noopener noreferrer" class="contact-btn bevel-out"><span>CloneDupe — discord.gg/clonedupe</span></a>
+          </div>
+          <p id="copyStatus" class="visually-hidden" role="status"></p>
+        </section>
+
+      </div>
+    </main>
+  </div>
+</div>
+
+</body>
+</html>
