@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#0d0e12">
-<meta name="description" content="merula's CV - Minecraft Skript Developer">
-<title>merula's CV</title>
+<meta name="theme-color" content="#0d0d0d">
+<meta name="description" content="Merula's CV - Minecraft Skript Developer">
+<title>Merula's CV</title>
 <link rel="icon" href="assets/img/profile.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,13 +17,13 @@
 <link rel="stylesheet" href="assets/css/intro.css">
 <style>
 :root {
-  --bg-color: #0d0e12;
-  --card-bg: #141720;
-  --accent-color: #7289da;
-  --accent-glow: #00f2fe;
-  --text-main: #e2e8f0;
-  --text-sub: #94a3b8;
-  --border-color: #2a2f45;
+  --bg-color: #0d0d0d;
+  --card-bg: #171717;
+  --accent-color: #ffffff;
+  --accent-glow: #e0e0e0;
+  --text-main: #f0f0f0;
+  --text-sub: #a3a3a3;
+  --border-color: #2e2e2e;
   --font-main: 'JetBrains Mono', monospace;
   --font-heading: 'Chakra Petch', sans-serif;
   --font-startup: 'Orbitron', sans-serif;
@@ -41,7 +41,7 @@ html.intro-active .game-window { opacity: 0; pointer-events: none; }
   position: fixed;
   inset: 0;
   z-index: 999;
-  background-color: #07080b;
+  background-color: #050505;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,7 +54,7 @@ html.intro-active .game-window { opacity: 0; pointer-events: none; }
   font-weight: 900;
   letter-spacing: 6px;
   color: var(--accent-glow);
-  text-shadow: 0 0 20px rgba(0, 242, 254, 0.6);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
   text-transform: uppercase;
   display: flex;
   gap: 8px;
@@ -73,7 +73,7 @@ html.intro-active .game-window { opacity: 0; pointer-events: none; }
   display: block;
   height: 100%;
   width: 0%;
-  background: linear-gradient(90deg, var(--accent-color), var(--accent-glow));
+  background: linear-gradient(90deg, #737373, var(--accent-color));
   animation: loadFill 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
@@ -83,10 +83,10 @@ html.intro-active .game-window { opacity: 0; pointer-events: none; }
 }
 
 .game-window {
-  background: #10121a;
+  background: #121212;
   border: 1px solid var(--border-color);
   border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.8);
   padding: 24px;
 }
 
@@ -94,12 +94,12 @@ html.intro-active .game-window { opacity: 0; pointer-events: none; }
   font-family: var(--font-heading);
   font-size: 2rem;
   font-weight: 700;
-  color: #fff;
+  color: #ffffff;
   letter-spacing: 1px;
 }
 
 .player-title {
-  color: var(--accent-glow);
+  color: #a3a3a3;
   font-weight: 600;
 }
 
@@ -115,20 +115,20 @@ html.intro-active .game-window { opacity: 0; pointer-events: none; }
 }
 
 .nav-item:hover, .contact-btn:hover, .bevel-out:hover {
-  border-color: var(--accent-glow) !important;
-  box-shadow: 0 0 15px rgba(0, 242, 254, 0.2) !important;
+  border-color: #ffffff !important;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.15) !important;
   transform: translateY(-2px);
-  color: #fff !important;
+  color: #ffffff !important;
 }
 
 .nav-item.active {
-  background: linear-gradient(135deg, rgba(114,137,218,0.2), rgba(0,242,254,0.1)) !important;
-  border-color: var(--accent-glow) !important;
-  color: var(--accent-glow) !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.03)) !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
 }
 
 .visit-counter {
-  background: rgba(255,255,255,0.03);
+  background: rgba(255, 255, 255, 0.03);
   padding: 8px 14px;
   border-radius: 6px;
   border: 1px solid var(--border-color);
@@ -137,7 +137,7 @@ html.intro-active .game-window { opacity: 0; pointer-events: none; }
 }
 
 .visit-count {
-  color: var(--accent-glow);
+  color: #ffffff;
   font-weight: 700;
 }
 
@@ -147,11 +147,12 @@ html.intro-active .game-window { opacity: 0; pointer-events: none; }
   border-radius: 8px;
   padding: 16px;
   margin-bottom: 12px;
+  line-height: 1.6;
 }
 
 .about-num {
-  background: var(--accent-glow);
-  color: #000;
+  background: #ffffff;
+  color: #000000;
   font-weight: 800;
   border-radius: 4px;
   padding: 2px 8px;
@@ -209,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function () {
         </div>
       </div>
 
-      <h1 class="player-name">merula</h1>
+      <h1 class="player-name">Merula</h1>
       <p class="player-title">Minecraft Developer</p>
       <span class="server-tag">Skript Specialist</span>
 
@@ -229,18 +230,18 @@ document.addEventListener("DOMContentLoaded", function () {
         <section class="tab-panel active" id="panel-about" role="tabpanel" aria-labelledby="tab-about">
           <h2>About Me</h2>
           <ol class="about-list">
-            <li><span class="about-num" aria-hidden="true">1</span><span>I'm merula, a 14-year-old Minecraft developer specializing in custom server mechanics and Skript logic.</span></li>
-            <li><span class="about-num" aria-hidden="true">2</span><span>Alongside Skript, I write C++, HTML, and JavaScript, and I am currently expanding my knowledge in Java plugin development.</span></li>
+            <li><span class="about-num" aria-hidden="true">1</span><span>Hello, my name is Merula. I am a 14-year-old Minecraft developer who primarily specializes in advanced Skript development. Over my time working with Minecraft server environments, I have developed a strong passion for designing custom server mechanics, managing complex plugin ecosystems, and creating seamless gameplay experiences for active communities.</span></li>
+            <li><span class="about-num" aria-hidden="true">2</span><span>In addition to my core expertise in Skript, I am also experienced in programming languages such as C++, HTML, and JavaScript, which allows me to work across both web and backend software environments. Furthermore, I am currently expanding my technical toolset by actively learning Java to build native Bukkit, Paper, and Purpur Minecraft plugins from scratch.</span></li>
           </ol>
         </section>
 
         <section class="tab-panel" id="panel-skills" role="tabpanel" aria-labelledby="tab-skills">
-          <h2>Skills</h2>
+          <h2>Skills &amp; Languages</h2>
 
           <div data-skills>
             <div class="skill-row skill-emerald" data-pct="100">
               <div class="skill-head">
-                <span class="skill-left"><span class="skill-swatch" aria-hidden="true"></span><span class="skill-name" id="skill-skript">Skript Development</span></span>
+                <span class="skill-left"><span class="skill-swatch" aria-hidden="true"></span><span class="skill-name" id="skill-skript">Skript Development (Advanced Mechanics &amp; GUI Systems)</span></span>
                 <span class="skill-pct">100%</span>
               </div>
               <div class="skill-track bevel-in" role="progressbar" aria-labelledby="skill-skript" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill"></div></div>
@@ -248,7 +249,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <div class="skill-row skill-diamond" data-pct="70">
               <div class="skill-head">
-                <span class="skill-left"><span class="skill-swatch" aria-hidden="true"></span><span class="skill-name" id="skill-cpp">C++</span></span>
+                <span class="skill-left"><span class="skill-swatch" aria-hidden="true"></span><span class="skill-name" id="skill-cpp">C++ (Object-Oriented Programming &amp; System Logic)</span></span>
                 <span class="skill-pct">70%</span>
               </div>
               <div class="skill-track bevel-in" role="progressbar" aria-labelledby="skill-cpp" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill"></div></div>
@@ -256,7 +257,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <div class="skill-row skill-redstone" data-pct="75">
               <div class="skill-head">
-                <span class="skill-left"><span class="skill-swatch" aria-hidden="true"></span><span class="skill-name" id="skill-html">HTML &amp; CSS</span></span>
+                <span class="skill-left"><span class="skill-swatch" aria-hidden="true"></span><span class="skill-name" id="skill-html">HTML &amp; CSS (Responsive UI Design &amp; Layouts)</span></span>
                 <span class="skill-pct">75%</span>
               </div>
               <div class="skill-track bevel-in" role="progressbar" aria-labelledby="skill-html" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill"></div></div>
@@ -264,7 +265,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <div class="skill-row skill-gold" data-pct="60">
               <div class="skill-head">
-                <span class="skill-left"><span class="skill-swatch" aria-hidden="true"></span><span class="skill-name" id="skill-js">JavaScript</span></span>
+                <span class="skill-left"><span class="skill-swatch" aria-hidden="true"></span><span class="skill-name" id="skill-js">JavaScript (Interactive Scripts &amp; Logic)</span></span>
                 <span class="skill-pct">60%</span>
               </div>
               <div class="skill-track bevel-in" role="progressbar" aria-labelledby="skill-js" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill"></div></div>
@@ -272,7 +273,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <div class="skill-row skill-ender" data-pct="35">
               <div class="skill-head">
-                <span class="skill-left"><span class="skill-swatch" aria-hidden="true"></span><span class="skill-name" id="skill-java">Java (Learning)</span></span>
+                <span class="skill-left"><span class="skill-swatch" aria-hidden="true"></span><span class="skill-name" id="skill-java">Java Development (Paper/Spigot API - Currently Learning)</span></span>
                 <span class="skill-pct">35%</span>
               </div>
               <div class="skill-track bevel-in" role="progressbar" aria-labelledby="skill-java" aria-valuemin="0" aria-valuemax="100"><div class="skill-fill"></div></div>
@@ -283,15 +284,17 @@ document.addEventListener("DOMContentLoaded", function () {
         <section class="tab-panel" id="panel-past" role="tabpanel" aria-labelledby="tab-past">
           <h2>Past Experience</h2>
 
+          <!-- Server Experience 1: PigFFA -->
+          <!-- Description: Worked as a primary developer for PigFFA, creating custom Skripts, handling bug fixes, and maintaining server utilities. Resigned from position. Official Discord: discord.gg/pigffa -->
           <div class="advancement bevel-out">
             <div class="adv-icon" data-media>
               <img src="assets/img/current-pigffa.png" alt="" width="42" height="42" decoding="async">
               <span class="adv-icon-fallback" aria-hidden="true">PF</span>
             </div>
             <div class="adv-body">
-              <h3><a href="https://discord.gg/pigffa" target="_blank" rel="noopener noreferrer" class="adv-title-link">PigFFA — Developer</a></h3>
-              <p class="adv-date">Former (Resigned)</p>
-              <p>Handled server mechanics, custom Skript configurations, and developer solutions.</p>
+              <h3>PigFFA — Developer</h3>
+              <p class="adv-date">Former Developer (Resigned)</p>
+              <p>Served as a key server developer responsible for designing custom Skript systems, configuring core gameplay plugins and making them better, and maintaining stability. (Discord: discord.gg/pigffa)</p>
             </div>
           </div>
 
@@ -301,9 +304,9 @@ document.addEventListener("DOMContentLoaded", function () {
               <span class="adv-icon-fallback" aria-hidden="true">UF</span>
             </div>
             <div class="adv-body">
-              <h3><a href="https://discord.gg/unstableffas" target="_blank" rel="noopener noreferrer" class="adv-title-link">UnstableFFAKit — Helper</a></h3>
-              <p class="adv-date">Former (Resigned)</p>
-              <p>Assisted server setup, player support, and configuration tasks.</p>
+              <h3>UnstableFFAKit — Helper</h3>
+              <p class="adv-date">Former Helper (Resigned)</p>
+              <p>Assisted with making a different events system and moderating. (Discord: discord.gg/unstableffas)</p>
             </div>
           </div>
         </section>
@@ -311,9 +314,7 @@ document.addEventListener("DOMContentLoaded", function () {
         <section class="tab-panel" id="panel-contact" role="tabpanel" aria-labelledby="tab-contact">
           <h2>Contact</h2>
           <div class="contact-grid">
-            <button type="button" class="contact-btn bevel-out" data-copy="merula"><span class="contact-label">Discord — merula</span></button>
-            <a href="https://discord.gg/pigffa" target="_blank" rel="noopener noreferrer" class="contact-btn bevel-out"><span>PigFFA Discord — discord.gg/pigffa</span></a>
-            <a href="https://discord.gg/unstableffas" target="_blank" rel="noopener noreferrer" class="contact-btn bevel-out"><span>UnstableFFAKit Discord — discord.gg/unstableffas</span></a>
+            <button type="button" class="contact-btn bevel-out" data-copy="itzmerula"><span class="contact-label">Discord — @itzmerula</span></button>
           </div>
           <p id="copyStatus" class="visually-hidden" role="status"></p>
         </section>
